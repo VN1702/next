@@ -23,7 +23,7 @@ export default function SignupPage() {
             setLoading(true);
              const response = await axios.post("/api/users/signup", user);
             console.log("Signup success",response.data);
-            router.push("/login");
+            router.push("/app/api/users/login/route.ts");
         }catch(error:any){
             console.log("Signup failed",error.message);
             toast.error(error.message);
